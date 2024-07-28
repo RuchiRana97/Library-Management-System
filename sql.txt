@@ -1,0 +1,38 @@
+create database library_ms;
+use library_ms;
+CREATE TABLE users (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50),
+    password VARCHAR(50),
+    email VARCHAR(100),
+    contact VARCHAR(20),
+    PRIMARY KEY (id)
+);
+CREATE TABLE student_details (
+    student_id INT(11) NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    course VARCHAR(100),
+    branch VARCHAR(100),
+    PRIMARY KEY (student_id)
+);
+CREATE TABLE book_details (
+    book_id INT(11) NOT NULL AUTO_INCREMENT,
+    book_name VARCHAR(250),
+    author VARCHAR(100),
+    quantity INT(11),
+    PRIMARY KEY (book_id)
+);
+CREATE TABLE issue_book_details (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    book_id INT(11),
+    book_name VARCHAR(150),
+    student_id INT(11),
+    student_name VARCHAR(50),
+    issue_date DATE,
+    due_date DATE,
+    status VARCHAR(20),
+    PRIMARY KEY (id)
+);
+
+
+
